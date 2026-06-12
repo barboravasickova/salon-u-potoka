@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -119,7 +120,7 @@
               <h3 class="service-card__title">Trimování</h3>
               <img src="images/trimovani-icon.svg" alt="" class="service-card__icon" width="28" height="28">
             </div>
-            <p class="service-card__tagline">Profesionální úprava drsnosrstých plemen</p>
+            <p class="service-card__tagline">Úprava drsnosrstých plemen</p>
             <p class="service-card__text">Specializuji se na knírače, teriéry, jezevčíky i kokršpaněly. Používám správnou techniku pro zdravou a lesklou srst.</p>
           </article>
 
@@ -136,17 +137,17 @@
       </div>
     </section>
 
-    <section class="feature-block feature-block--bg">
-      <div class="container">
-        <div class="feature-block__inner feature-block__inner--reverse">
-          <div class="feature-block__image-wrap">
-            <img src="images/nadstandart.jpg" alt="Pes v ručníku po koupání" class="feature-block__image">
+    <section class="feature-blocks">
+      <div class="feature-blocks__row feature-blocks__row--light">
+        <div class="feature-blocks__inner">
+          <div class="feature-blocks__image-wrap">
+            <img src="images/nadstandart.jpg" alt="Pes v ručníku po koupání" class="feature-blocks__image">
           </div>
-          <div class="feature-block__content">
-            <h2 class="feature-block__title">
+          <div class="feature-blocks__content">
+            <h2 class="feature-blocks__title">
               <span class="title-highlight title-highlight--full">Nadstandardní péče<img src="images/underline-nadstandart.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
             </h2>
-            <ul class="feature-block__list">
+            <ul class="feature-blocks__list">
               <li>Ovocné a bahenní masky na srst</li>
               <li>Pomoc s dermatologickými problémy</li>
               <li>Čištění uší a depilace</li>
@@ -154,23 +155,20 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="feature-block feature-block--bg feature-block--alt">
-      <div class="container">
-        <div class="feature-block__inner">
-          <div class="feature-block__content">
-            <h2 class="feature-block__title">
+      <div class="feature-blocks__row feature-blocks__row--mid">
+        <div class="feature-blocks__inner">
+          <div class="feature-blocks__content">
+            <h2 class="feature-blocks__title">
               <span class="title-highlight title-highlight--full">Kvalitní krmiva a doplňky<img src="images/underline-kvalitni.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
             </h2>
-            <ul class="feature-block__list">
+            <ul class="feature-blocks__list">
               <li>Krmiva Belcando a Leonardo</li>
               <li>Kosmetika a profesionální hřebeny</li>
               <li>Oblečky, hračky a další produkty</li>
             </ul>
           </div>
-          <div class="feature-block__image-wrap">
-            <img src="images/shop.jpg" alt="Chovatelské potřeby v salonu" class="feature-block__image">
+          <div class="feature-blocks__image-wrap">
+            <img src="images/shop.jpg" alt="Chovatelské potřeby v salonu" class="feature-blocks__image">
           </div>
         </div>
       </div>
@@ -192,15 +190,17 @@
     </section>
 
     <section class="references" id="reference">
-      <button class="references__arrow references__arrow--prev" id="ref-prev" aria-label="Předchozí reference">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+      <div class="references__layout">
+        <button class="references__arrow references__arrow--prev" id="ref-prev" aria-label="Předchozí reference">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
 
-      <div class="references__content">
+        <div class="references__content">
+        <p class="section-label">Reference</p>
         <h2 class="references__title">
-          Jak se u mě pejskům <span class="title-highlight title-highlight--light">líbilo?<img src="images/underline-recenze.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
+          <span class="title-highlight title-highlight--full">Jak se u mě pejskům líbilo?<img src="images/underline-kompletni.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
         </h2>
 
         <div class="references__slider" id="references-slider">
@@ -211,35 +211,46 @@
                 <footer class="references__author">Pavel Š.</footer>
                 <img src="images/stars.svg" alt="5 hvězdiček" class="references__stars" width="200" height="36">
               </blockquote>
+              <blockquote class="references__slide">
+                <p class="references__quote">„Děkujeme paní Aulehlové za profesionální přístup a ostříhání pejska. Po dlouhé době jsme spokojeni a nebudeme měnit. Všem můžeme doporučit."</p>
+                <footer class="references__author">Jan Ch.</footer>
+                <img src="images/stars.svg" alt="5 hvězdiček" class="references__stars" width="200" height="36">
+              </blockquote>
+              <blockquote class="references__slide">
+                <p class="references__quote">„Moc milá a hodná paní kadeřnice, takovou bych taky chtěla, pes se zpočátku bál, ale stres z něj opadal stejně rychle jako srst navíc. Vlídný a laskavý přístup, jsem nadšená."</p>
+                <footer class="references__author">Markéta J.</footer>
+                <img src="images/stars.svg" alt="5 hvězdiček" class="references__stars" width="200" height="36">
+              </blockquote>
             </div>
           </div>
         </div>
       </div>
 
-      <button class="references__arrow references__arrow--next" id="ref-next" aria-label="Další reference">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+        <button class="references__arrow references__arrow--next" id="ref-next" aria-label="Další reference">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </section>
 
     <section class="about" id="o-mne">
       <div class="container">
         <div class="about__intro">
+          <p class="section-label">O mně</p>
           <h2 class="section-title">
-            <span class="title-highlight">Pečlivost<img src="images/underline-peclivost.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>, trpělivost a láska ke zvířatům
+            <span class="title-highlight title-highlight--full">Pečlivost, trpělivost a láska ke zvířatům<img src="images/underline-peclivost.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
           </h2>
-          <p>Věřím, že každý návštěvník – ať už na dvou nebo čtyřech nohách – by si měl z mého salonu odnést především příjemný pocit. Moje práce není jen o stříhání, je o porozumění individuálním potřebám vašich parťáků. Ke každému pejskovi i kočce přistupuji s maximální trpělivostí, klidem a péčí, kterou si zaslouží.</p>
-          <p>Zakládám si na tom, aby byl čas strávený u mě v salonu bez stresu. Moji zákazníci o mně říkají, že pracuji precizně a s profesionálním přístupem, ale pro mě je největší odměnou, když se ke mně vaši miláčci rádi vracejí.</p>
+          <p>Věřím, že každý návštěvník – ať už na dvou nebo čtyřech nohách – by si měl z mého salonu odnést především příjemný pocit. Moje práce není jen o stříhání, je o porozumění individuálním potřebám vašich parťáků. <strong>Ke každému pejskovi i kočce přistupuji s maximální trpělivostí, klidem a péčí, kterou si zaslouží.</strong></p>
         </div>
 
         <div class="about__grid">
           <div class="about__image-wrap">
-            <img src="images/strihani.jpg" alt="Úprava psa v salonu" class="about__image">
+            <img src="images/o-mne.jpg" alt="Úprava psa v salonu" class="about__image">
           </div>
           <div class="about__advantages">
             <h3 class="about__advantages-title">
-              Klíčové <span class="title-highlight">výhody<img src="images/underline-vyhody.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>:
+              Klíčové výhody:
             </h3>
             <ul class="about__list">
               <li><strong>Společně a v klidu</strong> – Pokud chcete, u úpravy můžete zůstat. Váš parťák tak bude klidnější a vy uvidíte, že je v dobrých rukou.</li>
@@ -252,37 +263,29 @@
     </section>
 
     <section class="contact" id="kontakt">
-      <div class="container">
-        <div class="contact__grid">
-          <div class="contact__map">
-            <iframe
-              src="https://maps.google.com/maps?q=Husova+308,+664+84+B%C3%ADlovice+nad+Svitavou&hl=cs&z=16&output=embed"
-              title="Mapa – Salon U Potoka, Husova 308, Bílovice nad Svitavou"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
-          </div>
+      <div class="contact__grid">
+        <div class="contact__map">
+          <div id="contact-map" role="region" aria-label="Mapa – Salon U Potoka, Husova 308, Bílovice nad Svitavou"></div>
+        </div>
 
-          <div class="contact__info">
+        <div class="contact__info">
+          <div class="contact__info-inner">
             <h2 class="contact__title">Těším se na vaši návštěvu!</h2>
 
             <div class="contact__details">
               <p class="contact__name">Jana Aulehlová</p>
               <p><strong>Adresa:</strong> Husova 308, Bílovice nad Svitavou</p>
-              <p><strong>Telefon:</strong> <a href="tel:+420733506801">733 506 801</a>, <a href="tel:+420723801279">723 801 279</a></p>
-              <p><strong>E-mail:</strong> <a href="mailto:psisalonupotoka@seznam.cz">psisalonupotoka@seznam.cz</a></p>
+              <div class="contact__nav-links">
+                <a href="https://mapy.com/s/jerujoruha" class="contact__nav-link" target="_blank" rel="noopener">Navigovat přes Mapy.com</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Husova+308,+Bílovice+nad+Svitavou" class="contact__nav-link" target="_blank" rel="noopener">Navigovat přes Google Maps</a>
+              </div>
             </div>
 
             <div class="contact__booking">
               <p><strong>Objednávky:</strong></p>
               <p>Většinu termínů najdeme do 1–3 dnů, včetně víkendů.</p>
-              <p>Najdu pro vás volný termín do 3 dnů, a to i o víkendu. Těším se na vás v Bílovicích!</p>
-            </div>
-
-            <div class="contact__nav-links">
-              <a href="https://mapy.cz/zakladni?q=Husova%20308%2C%20B%C3%ADlovice%20nad%20Svitavou" class="contact__nav-link" target="_blank" rel="noopener">Navigovat přes Mapy.cz</a>
-              <a href="https://www.google.com/maps/search/?api=1&query=Husova+308,+Bílovice+nad+Svitavou" class="contact__nav-link" target="_blank" rel="noopener">Navigovat přes Google Maps</a>
+              <p><strong>Telefon:</strong> <a href="tel:+420733506801">733 506 801</a>, <a href="tel:+420723801279">723 801 279</a></p>
+              <p><strong>E-mail:</strong> <a href="mailto:psisalonupotoka@seznam.cz">psisalonupotoka@seznam.cz</a></p>
             </div>
 
             <div class="contact__social">
@@ -301,54 +304,62 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <img src="images/logo-salon-u-potoka.svg" alt="Salon pro psy U Potoka" class="footer__logo" width="200" height="60">
-        </div>
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="images/logo-salon-u-potoka.svg" alt="Salon pro psy U Potoka" class="footer__logo" width="239" height="72">
+          </div>
 
-        <div class="footer__col">
-          <h4 class="footer__heading">Navigace</h4>
-          <ul class="footer__links">
-            <li><a href="#sluzby">Služby</a></li>
-            <li><a href="#reference">Reference</a></li>
-            <li><a href="#o-mne">O mně</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-        </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Navigace</h4>
+            <ul class="footer__links">
+              <li><a href="#sluzby">Služby</a></li>
+              <li><a href="#reference">Reference</a></li>
+              <li><a href="#o-mne">O mně</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+          </div>
 
-        <div class="footer__col">
-          <h4 class="footer__heading">Kontakt</h4>
-          <address class="footer__address">
-            <p>Tel.: <a href="tel:+420733506801">733 506 801</a>, <a href="tel:+420723801279">723 801 279</a></p>
-            <p>Husova 308, Bílovice nad Svitavou</p>
-            <p>Provozovatel: Jana Aulehlová</p>
-            <p>IČO: 74688561</p>
-            <p>Zapsána u ŽÚ Šlapanice, ev. č. 370304-14593.</p>
-            <p>Nejsem plátce DPH.</p>
-          </address>
-        </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Rezervace</h4>
+            <address class="footer__address">
+              <p>Tel.: <a href="tel:+420733506801">733 506 801</a>, <a href="tel:+420723801279">723 801 279</a></p>
+              <p>Husova 308, Bílovice nad Svitavou</p>
+              <p>Provozovatel: Jana Aulehlová</p>
+              <p>IČO: 74688561</p>
+              <p>Zapsána u ŽÚ Šlapanice, ev. č. 370304-14593.</p>
+              <p>Nejsem plátce DPH.</p>
+            </address>
+          </div>
 
-        <div class="footer__col">
-          <h4 class="footer__heading">Sledujte nás</h4>
-          <div class="footer__social">
-            <a href="#" class="social-link social-link--footer" aria-label="Facebook" target="_blank" rel="noopener">
-              <img src="images/facebook-icon.svg" alt="" width="20" height="20">
-            </a>
-            <a href="#" class="social-link social-link--footer" aria-label="Instagram" target="_blank" rel="noopener">
-              <img src="images/instagram-icon.svg" alt="" width="20" height="20">
-            </a>
+          <div class="footer__col">
+            <h4 class="footer__heading">Sledujte nás</h4>
+            <div class="footer__social">
+              <a href="#" class="social-link social-link--footer" aria-label="Instagram" target="_blank" rel="noopener">
+                <img src="images/instagram-icon.svg" alt="" width="20" height="20">
+              </a>
+              <a href="#" class="social-link social-link--footer" aria-label="Facebook" target="_blank" rel="noopener">
+                <img src="images/facebook-icon.svg" alt="" width="20" height="20">
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="footer__bottom">
-        <p>&copy; 2026 Salon U Potoka. Všechna práva vyhrazena.</p>
-        <p><a href="#">Ochrana osobních údajů</a></p>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__bottom-copy">&copy; 2026 Salon U Potoka.</p>
+        <p class="footer__bottom-rights">Všechna práva vyhrazena.</p>
+        <p class="footer__bottom-legal"><a href="#">Ochrana osobních údajů</a></p>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map-config.js"></script>
+  <script src="js/map.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
