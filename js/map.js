@@ -2,9 +2,8 @@
   'use strict';
 
   var mapEl = document.getElementById('contact-map');
-  var apiKey = window.MAPY_API_KEY;
 
-  if (!mapEl || !apiKey || typeof L === 'undefined') {
+  if (!mapEl || typeof L === 'undefined') {
     return;
   }
 
@@ -18,10 +17,10 @@
     attributionControl: true
   });
 
-  L.tileLayer('https://api.mapy.cz/v1/maptiles/basic/256/{z}/{x}/{y}?apikey=' + apiKey, {
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     minZoom: 6,
     maxZoom: 19,
-    attribution: '&copy; <a href="https://mapy.cz/" target="_blank" rel="noopener">Seznam.cz</a> &amp; <a href="https://mapy.cz/" target="_blank" rel="noopener">Mapy.com</a>'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
   }).addTo(map);
 
   L.marker(salonCoords, {

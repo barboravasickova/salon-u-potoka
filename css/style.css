@@ -990,7 +990,7 @@ body.nav-open {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-columns: auto 0.85fr 1.55fr 0.75fr;
   column-gap: 42px;
   row-gap: 48px;
   align-items: start;

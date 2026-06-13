@@ -1,1 +1,0 @@
-window.MAPY_API_KEY = 'YOUR_MAPY_API_KEY';
