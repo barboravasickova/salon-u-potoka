@@ -1145,8 +1145,10 @@ body.nav-open {
 
   .header {
     padding: 16px 0;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10001;
+    background-color: var(--color-bg);
   }
 
   .header__inner {
